@@ -8,9 +8,25 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        anton: ["var(--font-anton)", "sans-serif"],
+        inter: ["var(--font-inter)", "sans-serif"],
+        "sf-pro-display": ["var(--font-sf-pro-display)", "sans-serif"],
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        primary: "#000D12",
+        yellow: "#FFF000",
+        "dark-yellow": "#FEC752",
+        "dark-pink": "#D5786D",
+        orange: "#FF7D1E",
+        red: "#F03642",
+        pink: "#D25990",
+        purple: "#A35CE3",
+        "blue-purple": "#675DE1",
+        blue: "#0CABF2",
+        "light-green": "#87D059",
       },
     },
   },
