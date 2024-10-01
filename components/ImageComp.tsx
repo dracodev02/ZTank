@@ -8,7 +8,7 @@ interface ImageProps {
 
 const ImageComp: React.FC<ImageProps> = ({ src, className }) => {
   const [imgSrc, setImgSrc] = useState(src);
-  const classNameDefault = clsx("rounded overflow-hidden", className);
+  const classNameDefault = clsx(" overflow-hidden", className);
 
   // In Next.js, the inability to catch image errors during the initial run of the project may be due to how Next.js handles page loading.
   useEffect(() => {

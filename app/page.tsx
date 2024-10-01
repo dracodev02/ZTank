@@ -1,32 +1,17 @@
 "use client";
 
-import { useInView } from "react-intersection-observer";
+import Overview from "./home/Overview";
 import AboutUs from "./home/AboutUs";
-
-function SectionWrapper({ children }: { children: React.ReactNode }) {
-  const { ref, inView } = useInView({
-    triggerOnce: true,
-    threshold: 0.4,
-  });
-
-  return (
-    <div
-      ref={ref}
-      className={`transition-opacity duration-1000 ${
-        inView ? "opacity-100" : "opacity-50"
-      }`}
-    >
-      {children}
-    </div>
-  );
-}
+import GameModes from "./home/GameModes";
+import OurFeatures from "./home/OurFeatures";
 
 export default function Home() {
   return (
     <>
-      <SectionWrapper>
-        <AboutUs />
-      </SectionWrapper>
+      <Overview />
+      <AboutUs />
+      <GameModes />
+      <OurFeatures />
     </>
   );
 }

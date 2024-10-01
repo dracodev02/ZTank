@@ -17,6 +17,7 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
         primary: "#000D12",
+        gray: "#030303",
         yellow: "#FFF000",
         "dark-yellow": "#FEC752",
         "dark-pink": "#D5786D",
@@ -27,6 +28,9 @@ const config: Config = {
         "blue-purple": "#675DE1",
         blue: "#0CABF2",
         "light-green": "#87D059",
+      },
+      boxShadow: {
+        whyShadow: "0px 3.75px 3.75px 0px #FFAC00 inset",
       },
     },
   },
