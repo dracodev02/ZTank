@@ -6,6 +6,7 @@ import miniGame from "@/public/img/game-modes/mini-game.png";
 import pre from "@/public/img/game-modes/pre.png";
 import team from "@/public/img/game-modes/team.png";
 import gradient from "@/public/img/gradient-gamemodes.png";
+import reddots from "@/public/img/game-modes/reddots.png";
 
 const GameModes = () => {
   const cards = [
@@ -42,15 +43,18 @@ const GameModes = () => {
   ];
 
   return (
-    <div className="relative mt-[281px]">
-      <ImageComp src={warTank.src} className="w-full h-full max-h-[1217px]" />
-      <ImageComp className="absolute top-0 left-0 w-full" src={gradient.src} />
-      <div className="absolute top-0 left-0 w-full">
+    <div className="relative z-[3] h-fit w-full">
+      <ImageComp
+        src={warTank.src}
+        className="w-full h-full absolute top-0 left-0 z-[3]"
+      />
+      {/* <ImageComp className="absolute top-0 left-0 w-full" src={gradient.src} /> */}
+      <div className="pt-[344px] top-0 left-0 z-10 w-screen relative ">
         <div className=" max-w-[1520px]  mx-auto flex flex-col gap-[72px] items-center">
-          <h2 className="font-anton text-[52px] leading-[80px] text-center gap-[58px]">
+          <h2 className="font-anton text-[52px] leading-[80px] text-center ">
             Game Modes
           </h2>
-          <div className="flex flex-wrap justify-center gap-x-[75px] gap-y-[64px]">
+          <div className="flex pb-20 flex-wrap justify-center gap-x-[75px] gap-y-[64px]">
             {cards.map((card, index) => {
               return (
                 <div

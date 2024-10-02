@@ -22,7 +22,7 @@ const Header = () => {
   ];
 
   return (
-    <div className="w-full bg-[#000D12] h-[96px] fixed top-0 left-0 z-10 right-0 font-inter text-[20px] leading-6">
+    <div className="w-full bg-[#000D12] h-[96px] fixed top-0 left-0 z-20 right-0 font-inter text-[20px] leading-6">
       <div className="w-full h-full max-w-[1520px] mx-auto flex justify-between items-center">
         <ImageComp src={logo.src} className="aspect-square h-full" />
         <div className="flex gap-10">
