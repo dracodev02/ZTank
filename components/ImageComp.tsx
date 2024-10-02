@@ -4,9 +4,10 @@ import { useEffect, useState } from "react";
 interface ImageProps {
   src: string;
   className?: string;
+  onClick?: () => void;
 }
 
-const ImageComp: React.FC<ImageProps> = ({ src, className }) => {
+const ImageComp: React.FC<ImageProps> = ({ src, className, onClick }) => {
   const [imgSrc, setImgSrc] = useState(src);
   const classNameDefault = clsx(" overflow-hidden", className);
 
@@ -21,7 +22,7 @@ const ImageComp: React.FC<ImageProps> = ({ src, className }) => {
   }, [src]);
 
   return (
-    <div className={classNameDefault}>
+    <div onClick={onClick} className={classNameDefault}>
       <img
         className="object-cover w-full h-full"
         src={imgSrc}

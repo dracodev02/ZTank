@@ -33,31 +33,31 @@ const OurTechnologies = () => {
     },
   ];
   return (
-    <div className="w-full  h-full relative">
+    <div id="technologies" className="w-full h-full relative px-4">
       <ImageComp
         src={fireBackground.src}
         className="w-full h-full absolute top-0 object-cover left-0 "
       />
-      <div className="relative pt-[110px] pb-[182px] z-10 flex flex-col items-center gap-[72px] max-w-[1520px] w-full mx-auto">
-        <h2 className="font-anton text-[52px] leading-[80px] text-center w-full ">
+      <div className="relative py-24 z-10 flex flex-col items-center gap-[72px] max-w-[1520px] w-full mx-auto">
+        <h2 className="font-anton text-[52px] max-md:text-3xl leading-[80px] text-center w-full">
           Our Technologies
         </h2>
-        <div className="grid grid-cols-2 gap-x-[52px] gap-y-[60px]">
+        <div className="grid grid-cols-2 max-md:grid-cols-1 gap-x-[52px] gap-y-[60px] max-md:gap-6">
           {cards.map((card, index) => {
             return (
               <div
                 key={index}
-                className="shadow-whyShadow text-center gap-2 py-4 place-items-center justify-items-center bg-black bg-opacity-[0.68] rounded-[25px] w-[538px] aspect-[538/290] h-full"
+                className="shadow-whyShadow text-center gap-2 py-4 place-items-center justify-items-center bg-black bg-opacity-[0.68] rounded-[25px] w-full h-full"
               >
                 <ImageComp
                   src={card.imageSrc.src}
                   className="h-[112px] mx-auto aspect-square"
                 />
                 <div className="flex flex-col px-10">
-                  <h3 className="font-anton text-[34px] leading-[51px]">
+                  <h3 className="font-anton text-[34px] max-md:text-2xl leading-[51px]">
                     {card.title}
                   </h3>
-                  <p className="text-[20px] leading-[29px]">
+                  <p className="text-[20px] max-md:text-base leading-[29px]">
                     {card.description}
                   </p>
                 </div>

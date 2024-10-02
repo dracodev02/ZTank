@@ -51,23 +51,26 @@ const GameModes = () => {
       <div className="w-full h-full top-0 absolute left-0 bg-gradient-to-b from-black to-black via-transparent z-10 pointer-events-none"></div>
 
       {/* <ImageComp className="absolute hidden top-0 left-0 w-full" src={gradient.src} /> */}
-      <div className="py-[84px] top-0 left-0 z-10 w-full relative ">
-        <div className=" max-w-[1520px]  mx-auto flex flex-col gap-[72px] items-center">
-          <h2 className="font-anton text-[52px] leading-[80px] text-center ">
+      <div
+        id="gamemode"
+        className="pt-24 max-md:pb-0 top-0 left-0 z-10 w-full relative "
+      >
+        <div className="max-w-[1520px] mx-auto flex flex-col gap-[72px] items-center">
+          <h2 className="font-anton text-[52px] leading-[80px] text-center max-md:text-3xl">
             Game Modes
           </h2>
-          <div className="flex pb-20 flex-wrap justify-center gap-x-[75px] gap-y-[64px]">
+          <div className="flex flex-wrap justify-center gap-x-[75px] gap-y-[64px] max-md:gap-6 px-4">
             {cards.map((card, index) => {
               return (
                 <div
                   key={index}
-                  className="w-[450px] bg-black/30 shadow-whyShadow rounded-[25px] h-[427px] flex flex-col items-center justify-center text-center"
+                  className="max-w-[450px] bg-black/30 shadow-whyShadow rounded-[25px] h-[427px] flex flex-col items-center justify-center text-center"
                 >
                   <ImageComp src={card.imageSrc.src} />
-                  <h3 className="font-anton text-[34px] leading-[51px]">
+                  <h3 className="font-anton text-[34px] max-md:text-2xl leading-[51px]">
                     {card.title}
                   </h3>
-                  <p className="text-[20px] px-9 leading-[29px]">
+                  <p className="text-[20px] max-md:text-base px-9 leading-[29px]">
                     {card.description}
                   </p>
                 </div>
