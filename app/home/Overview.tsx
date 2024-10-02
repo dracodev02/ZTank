@@ -6,8 +6,10 @@ const Overview = () => {
     <div className="pt-24 relative">
       <ImageComp
         src={background.src}
-        className="object-cover w-screen h-screen max-h-[922px]"
+        // className="object-cover w-full h-screen max-h-[922px]"
+        className="object-cover h-auto "
       />
+      <div className="w-full h-[60%] bottom-0 absolute left-0 bg-gradient-to-b from-transparent to-black via-transparent"></div>
       <div className="absolute top-0 left-0 w-full ">
         <div className="w-full max-w-[1520px] mx-auto pt-[203px] flex flex-col gap-3">
           <h1 className="text-[86px] font-anton text-white uppercase inline-grid">

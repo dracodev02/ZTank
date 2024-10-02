@@ -43,13 +43,15 @@ const GameModes = () => {
   ];
 
   return (
-    <div className="relative z-[3] h-fit w-full">
+    <div className="relative z-[3] w-full">
       <ImageComp
         src={warTank.src}
-        className="w-full h-full absolute top-0 left-0 z-[3]"
+        className="w-full h-full object-cover absolute top-0 left-0 z-[3]"
       />
-      {/* <ImageComp className="absolute top-0 left-0 w-full" src={gradient.src} /> */}
-      <div className="pt-[344px] top-0 left-0 z-10 w-screen relative ">
+      <div className="w-full h-full top-0 absolute left-0 bg-gradient-to-b from-black to-black via-transparent z-10 pointer-events-none"></div>
+
+      {/* <ImageComp className="absolute hidden top-0 left-0 w-full" src={gradient.src} /> */}
+      <div className="py-[84px] top-0 left-0 z-10 w-full relative ">
         <div className=" max-w-[1520px]  mx-auto flex flex-col gap-[72px] items-center">
           <h2 className="font-anton text-[52px] leading-[80px] text-center ">
             Game Modes

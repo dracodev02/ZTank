@@ -1,6 +1,6 @@
 import ImageComp from "@/components/ImageComp";
 import red from "@/public/img/red.jpg";
-import fireBg from "@/public/img/fire-bg.png";
+import fireBg from "@/public/img/Group 21.png";
 import gradientTopBg from "@/public/img/gradient-bg-top.png";
 import gradientBotBg from "@/public/img/gradient-bg-bot.png";
 import whyBg from "@/public/img/why-ztank/why-bg.png";
@@ -31,26 +31,29 @@ const AboutUs = () => {
   ];
 
   return (
-    <div className="relative w-full h-fit ">
-      <div className="absolute w-full top-0 left-0 h-full">
+    <div className="relative w-full ">
+      <ImageComp
+        // className=" h-auto  w-full"
+        className="absolute  top-0 min-w-full  h-full w-auto  left-0  "
+        src={fireBg.src}
+      />
+      <div className="w-full h-full top-0 absolute left-0 bg-gradient-to-b z-[5]  pointer-events-none from-black to-transparent"></div>
+
+      {/* <div className="absolute w-full top-0 left-0 h-full">
         <ImageComp
           src={red.src}
-          className="w-full h-full absolute top-0 left-0"
+          className="w-full hidden h-full absolute top-0 left-0"
         />
         <ImageComp
-          className="absolute top-0 left-0 w-full z-[3]  h-full "
+          className="absolute hidden top-0 left-0 w-full z-[3]  h-full "
           src={gradientTopBg.src}
         />
-        {/* <ImageComp
-          className="absolute z-0 top-[300px] left-0 w-full h-full max-h-[405px]"
-          src={gradientBotBg.src}
-        /> */}
-      </div>
-      <div className="relative z-10 pt-[6.84%]  w-full">
         <ImageComp
-          className="absolute z-10 bottom-0 object-fill object-bottom top-[268px] left-0 w-full h-full "
-          src={fireBg.src}
+          className="absolute hidden z-0 top-[300px] left-0 w-full h-full max-h-[405px]"
+          src={gradientBotBg.src}
         />
+      </div> */}
+      <div className="relative z-10 pt-[6.84%] pb-[280px] w-full">
         <div className="w-full relative z-[11] mx-auto max-w-[1520px]">
           <div className="flex flex-col gap-5 px-[217px] text-center">
             <h2 className="font-anton text-[52px] leading-[79px]">

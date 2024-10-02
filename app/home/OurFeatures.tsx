@@ -30,21 +30,22 @@ const OurFeatures = () => {
   ];
   return (
     <div className="relative w-full h-full max-h-[1080px]">
-      <div className="absolute top-0 h-full left-0 w-full">
+      <ImageComp
+        src={welcomeBg.src}
+        className="w-full absolute h-full top-0 left-0 "
+      />{" "}
+      <div className="w-full h-full top-0 absolute left-0 bg-gradient-to-b from-black to-black via-transparent z-10 pointer-events-none"></div>
+      {/* <div className="absolute top-0 h-full left-0 w-full">
         <ImageComp
-          src={welcomeBg.src}
-          className="w-full absolute h-full top-0 left-0"
-        />
-        <ImageComp
-          className="absolute h-full top-0 left-0 w-full"
+          className="absolute hidden h-full top-0 left-0 w-full"
           src={gradient.src}
         />
         <ImageComp
-          className="absolute  h-full top-[60%] z-[1] left-0 w-full"
+          className="absolute hidden h-full top-[70%] z-[1] left-0 w-full"
           src={gradient2.src}
         />
-      </div>
-      <div className="w-full  h-full pt-[154px] relative z-10">
+      </div> */}
+      <div className="w-full pb-20 h-full pt-[154px] relative z-10">
         <div className="max-w-[1520px] mx-auto w-full flex flex-col gap-[62px]">
           <h2 className="font-anton text-[52px] leading-[80px] text-left w-full pl-8">
             Our Features
