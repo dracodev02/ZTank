@@ -5,8 +5,6 @@ import battle from "@/public/img/game-modes/battle.png";
 import miniGame from "@/public/img/game-modes/mini-game.png";
 import pre from "@/public/img/game-modes/pre.png";
 import team from "@/public/img/game-modes/team.png";
-import gradient from "@/public/img/gradient-gamemodes.png";
-import reddots from "@/public/img/game-modes/reddots.png";
 
 const GameModes = () => {
   const cards = [

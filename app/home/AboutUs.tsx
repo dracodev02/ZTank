@@ -6,27 +6,6 @@ import starknet2 from "@/public/img/why-ztank/starknet2.png";
 import starknet3 from "@/public/img/why-ztank/starknet3.png";
 
 const AboutUs = () => {
-  const cards = [
-    {
-      imageSrc: videoGame,
-      title: "Innovative Gameplay",
-      description:
-        "ZTANK brings the nostalgia of classic tank warfare to the next level, offering immersive real-time battles, exciting maps, and competitive gameplay designed for both solo players and teams.",
-    },
-    {
-      imageSrc: starknet2,
-      title: "Blockchain Ownership",
-      description:
-        "We enhance your gameplay experience by combining ownership through NFTs, allowing players to own, trade, and upgrade tanks, assets, and abilities, giving real value to your in-game achievements.",
-    },
-    {
-      imageSrc: starknet3,
-      title: "Powered by Starknet",
-      description:
-        "Ztank utilizes Starknet’s scalability, speed, and low-cost infrastructure to deliver a smooth and seamless gaming experience. With Starknet’s decentralized architecture, players can enjoy secure, fast transactions and true ownership of their assets.",
-    },
-  ];
-
   return (
     <div id="aboutus" className="relative w-full">
       <ImageComp
