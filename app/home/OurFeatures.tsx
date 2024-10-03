@@ -5,8 +5,16 @@ import layer1 from "@/public/img/our-features/Layer_1.png";
 import layer2 from "@/public/img/our-features/Layer_2.png";
 
 import layer3 from "@/public/img/our-features/Layer_3.png";
+import { useRef } from "react";
+import { useInView } from "framer-motion";
 
 const OurFeatures = () => {
+  const ourFeaturesRef = useRef(null);
+  const isInView = useInView(ourFeaturesRef, {
+    margin: "0px 0px -100px 0px",
+    once: true,
+  });
+
   const cards = [
     {
       imageSrc: layer1,
@@ -54,12 +62,18 @@ const OurFeatures = () => {
               src={tank.src}
               className="flex-1 w-full max-lg:absolute max-lg:left-1/2 max-lg:-translate-x-1/2 max-lg:top-1/2 max-lg:-translate-y-1/2 -z-[1]"
             />
-            <div className="lg:w-1/2 flex gap-10 max-md:gap-6 flex-col">
+            <div
+              ref={ourFeaturesRef}
+              className="lg:w-1/2 flex gap-10 max-md:gap-6 flex-col"
+            >
               {cards.map((card, index) => {
                 return (
                   <div
                     key={index}
-                    className="shadow-whyShadow pl-9 pr-5 h-fit bg-black/30 rounded-[25px] flex gap-5 py-6 justify-center items-center backdrop-blur-sm"
+                    style={{ animationDelay: `${index * 300}ms` }}
+                    className={`shadow-whyShadow pl-9 pr-5 h-fit bg-black/30 rounded-[25px] flex gap-5 py-6 justify-center items-center backdrop-blur-sm ${
+                      isInView && "animate-fade-up"
+                    }`}
                   >
                     <ImageComp
                       src={card.imageSrc.src}

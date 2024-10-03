@@ -5,8 +5,16 @@ import battle from "@/public/img/game-modes/battle.png";
 import miniGame from "@/public/img/game-modes/mini-game.png";
 import pre from "@/public/img/game-modes/pre.png";
 import team from "@/public/img/game-modes/team.png";
+import { useRef } from "react";
+import { useInView } from "framer-motion";
 
 const GameModes = () => {
+  const gameModeRef = useRef(null);
+  const isInView = useInView(gameModeRef, {
+    margin: "0px 0px -100px 0px",
+    once: true,
+  });
+
   const cards = [
     {
       imageSrc: earning,
@@ -57,12 +65,18 @@ const GameModes = () => {
           <h2 className="font-anton text-[52px] leading-[80px] text-center max-md:text-3xl">
             Game Modes
           </h2>
-          <div className="flex flex-wrap justify-center gap-x-[75px] gap-y-[64px] max-md:gap-6 px-4">
+          <div
+            ref={gameModeRef}
+            className="flex flex-wrap justify-center gap-x-[75px] gap-y-[64px] max-md:gap-6 px-4"
+          >
             {cards.map((card, index) => {
               return (
                 <div
                   key={index}
-                  className="max-w-[450px] bg-black/30 shadow-whyShadow rounded-[25px] h-[427px] flex flex-col items-center justify-center text-center"
+                  style={{ animationDelay: `${index * 300}ms` }}
+                  className={`max-w-[450px] bg-black/30 shadow-whyShadow rounded-[25px] h-[427px] flex flex-col items-center justify-center text-center ${
+                    isInView && "animate-fade-up"
+                  }`}
                 >
                   <ImageComp src={card.imageSrc.src} />
                   <h3 className="font-anton text-[34px] max-md:text-2xl leading-[51px]">

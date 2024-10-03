@@ -4,8 +4,16 @@ import isolation from "@/public/img/our-technologies/Isolation_Mode.png";
 import isolation1 from "@/public/img/our-technologies/Isolation_Mode1.png";
 import isolation2 from "@/public/img/our-technologies/Isolation_Mode2.png";
 import isolation3 from "@/public/img/our-technologies/Isolation_Mode3.png";
+import { useInView } from "framer-motion";
+import { useRef } from "react";
 
 const OurTechnologies = () => {
+  const ourTechRef = useRef(null);
+  const isInView = useInView(ourTechRef, {
+    margin: "0px 0px -100px 0px",
+    once: true,
+  });
+
   const cards = [
     {
       imageSrc: isolation,
@@ -42,12 +50,18 @@ const OurTechnologies = () => {
         <h2 className="font-anton text-[52px] max-md:text-3xl leading-[80px] text-center w-full">
           Our Technologies
         </h2>
-        <div className="grid grid-cols-2 max-md:grid-cols-1 gap-x-[52px] gap-y-[60px] max-md:gap-6">
+        <div
+          ref={ourTechRef}
+          className="grid grid-cols-2 max-md:grid-cols-1 gap-x-[52px] gap-y-[60px] max-md:gap-6"
+        >
           {cards.map((card, index) => {
             return (
               <div
                 key={index}
-                className="shadow-whyShadow text-center gap-2 py-4 place-items-center justify-items-center bg-black bg-opacity-[0.68] rounded-[25px] w-full h-full"
+                style={{ animationDelay: `${index * 300}ms` }}
+                className={`shadow-whyShadow text-center gap-2 py-4 place-items-center justify-items-center bg-black bg-opacity-[0.68] rounded-[25px] w-full h-full ${
+                  isInView && "animate-fade-up"
+                }`}
               >
                 <ImageComp
                   src={card.imageSrc.src}
