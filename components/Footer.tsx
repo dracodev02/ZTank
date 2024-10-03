@@ -13,13 +13,13 @@ const Footer = () => {
         </div>
         <div className="flex gap-8 w-fit">
           <div className=" grid place-items-center h-11 aspect-square rounded-full border border-white">
-            <FaXTwitter className=" text-[28px] leading-7" />
+            <FaXTwitter className=" text-[28px]" />
           </div>
           <div className=" grid place-items-center h-11 aspect-square rounded-full border border-white">
-            <ImSphere className=" text-[28px] leading-7" />
+            <ImSphere className=" text-[28px]" />
           </div>
           <div className=" grid place-items-center h-11 aspect-square rounded-full border border-white">
-            <FaTelegramPlane className=" text-[28px] leading-7" />
+            <FaTelegramPlane className=" text-[28px]" />
           </div>
         </div>
       </div>

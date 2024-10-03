@@ -9,7 +9,7 @@ const Overview = () => {
         className="object-cover w-full h-full absolute -z-[1]"
       />
       <div className="w-full h-full -z-[1] absolute bottom-0 left-0 bg-gradient-to-b from-transparent to-black via-transparent"></div>
-      <div className="w-full px-2 max-md:py-20">
+      <div className="w-full px-2 max-md:py-20 animate-fade-up">
         <div className="w-full max-w-[1520px] mx-auto flex flex-col gap-3">
           <h1 className="text-[86px] max-md:text-[40px] font-anton text-white uppercase inline-grid">
             <span>Epic Battles,</span>

@@ -4,8 +4,16 @@ import whyBg from "@/public/img/why-ztank/why-bg.png";
 import videoGame from "@/public/img/why-ztank/video-game.png";
 import starknet2 from "@/public/img/why-ztank/starknet2.png";
 import starknet3 from "@/public/img/why-ztank/starknet3.png";
+import { useInView } from "framer-motion";
+import { useRef } from "react";
 
 const AboutUs = () => {
+  const whyZtankRef = useRef(null);
+  const isInView = useInView(whyZtankRef, {
+    margin: "0px 0px -100px 0px",
+    once: true,
+  });
+
   return (
     <div id="aboutus" className="relative w-full">
       <ImageComp
@@ -37,52 +45,66 @@ const AboutUs = () => {
               <h2 className="font-anton text-[52px] max-md:text-3xl leading-[80px] text-center gap-[58px]">
                 Why ZTank?
               </h2>
-              <div className="flex flex-col gap-10 max-md:gap-6">
-                <div className="p-10 max-md:p-4 rounded-2xl max-md:flex-col max-md:justify-center flex gap-6 items-center bg-gray/65 backdrop-blur-sm">
-                  <ImageComp
-                    src={videoGame.src}
-                    className="min-w-[200px] w-[200px] h-[200px] aspect-square rounded-xl"
-                  />
-                  <div className="flex flex-col gap-6">
-                    <p className="font-anton text-3xl max-md:textxl max-md:text-center">
-                      Innovative Gameplay
-                    </p>
-                    <p className="text-xl max-md:text-center max-md:text-base">
-                      {`ZTANK brings the nostalgia of classic tank warfare to the
+              <div
+                ref={whyZtankRef}
+                className="flex flex-col gap-10 max-md:gap-6"
+              >
+                {isInView && (
+                  <>
+                    {" "}
+                    <div className="animate-fade-up transition-all p-10 max-md:p-4 rounded-2xl max-md:flex-col max-md:justify-center flex gap-6 items-center bg-gray/65 backdrop-blur-sm">
+                      <ImageComp
+                        src={videoGame.src}
+                        className="min-w-[200px] w-[200px] h-[200px] aspect-square rounded-xl"
+                      />
+                      <div className="flex flex-col gap-6">
+                        <p className="font-anton text-3xl max-md:textxl max-md:text-center">
+                          Innovative Gameplay
+                        </p>
+                        <p className="text-xl max-md:text-center max-md:text-base">
+                          {`ZTANK brings the nostalgia of classic tank warfare to the
                       next level, offering immersive real-time battles, exciting
                       maps, and competitive gameplay designed for both solo
                       players and teams.`}
-                    </p>
-                  </div>
-                </div>
-                <div className="p-10 max-md:p-4 rounded-2xl max-md:flex-col max-md:justify-center flex gap-6 items-center bg-gray/65 backdrop-blur-sm">
-                  <div className="flex flex-col gap-6">
-                    <p className="font-anton text-3xl max-md:textxl max-md:text-center text-end">
-                      Blockchain Ownership
-                    </p>
-                    <p className="text-xl max-md:text-center max-md:text-base text-end">
-                      {`We enhance your gameplay experience by combining ownership through NFTs, allowing players to own, trade, and upgrade tanks, assets, and abilities, giving real value to your in-game achievements.`}
-                    </p>
-                  </div>
-                  <ImageComp
-                    src={starknet2.src}
-                    className="min-w-[200px] w-[200px] h-[200px] aspect-square rounded-xl"
-                  />
-                </div>
-              </div>
-              <div className="p-10 max-md:p-4 rounded-2xl max-md:flex-col max-md:justify-center flex gap-6 items-center bg-gray/65 backdrop-blur-sm">
-                <ImageComp
-                  src={starknet3.src}
-                  className="min-w-[200px] w-[200px] h-[200px] aspect-square rounded-xl"
-                />
-                <div className="flex flex-col gap-6">
-                  <p className="font-anton text-3xl max-md:textxl max-md:text-center">
-                    Powered by Starknet{" "}
-                  </p>
-                  <p className="text-xl max-md:text-center max-md:text-base">
-                    {`Ztank utilizes Starknet’s scalability, speed, and low-cost infrastructure to deliver a smooth and seamless gaming experience. With Starknet’s decentralized architecture, players can enjoy secure, fast transactions and true ownership of their assets.`}
-                  </p>
-                </div>
+                        </p>
+                      </div>
+                    </div>
+                    <div
+                      style={{ animationDelay: "300ms" }}
+                      className="animate-fade-up p-10 max-md:p-4 rounded-2xl max-md:flex-col max-md:justify-center flex gap-6 items-center bg-gray/65 backdrop-blur-sm"
+                    >
+                      <div className="flex flex-col gap-6">
+                        <p className="font-anton text-3xl max-md:textxl max-md:text-center text-end">
+                          Blockchain Ownership
+                        </p>
+                        <p className="text-xl max-md:text-center max-md:text-base text-end">
+                          {`We enhance your gameplay experience by combining ownership through NFTs, allowing players to own, trade, and upgrade tanks, assets, and abilities, giving real value to your in-game achievements.`}
+                        </p>
+                      </div>
+                      <ImageComp
+                        src={starknet2.src}
+                        className="min-w-[200px] w-[200px] h-[200px] aspect-square rounded-xl"
+                      />
+                    </div>
+                    <div
+                      style={{ animationDelay: "600ms" }}
+                      className="animate-fade-up transition-all p-10 max-md:p-4 rounded-2xl max-md:flex-col max-md:justify-center flex gap-6 items-center bg-gray/65 backdrop-blur-sm"
+                    >
+                      <ImageComp
+                        src={starknet3.src}
+                        className="min-w-[200px] w-[200px] h-[200px] aspect-square rounded-xl"
+                      />
+                      <div className="flex flex-col gap-6">
+                        <p className="font-anton text-3xl max-md:textxl max-md:text-center">
+                          Powered by Starknet
+                        </p>
+                        <p className="text-xl max-md:text-center max-md:text-base">
+                          {`Ztank utilizes Starknet’s scalability, speed, and low-cost infrastructure to deliver a smooth and seamless gaming experience. With Starknet’s decentralized architecture, players can enjoy secure, fast transactions and true ownership of their assets.`}
+                        </p>
+                      </div>
+                    </div>
+                  </>
+                )}
               </div>
             </div>
           </div>
