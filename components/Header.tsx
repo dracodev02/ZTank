@@ -4,6 +4,7 @@ import ImageComp from "./ImageComp";
 import logo from "@/public/img/logo.png";
 import { useState } from "react";
 import useActiveSection from "@/hooks/useActiveSection";
+import Link from "next/link";
 
 const Header = () => {
   const items = [
@@ -66,9 +67,13 @@ const Header = () => {
           })}
         </div>
         <div className="flex items-center gap-4">
-          <button className="p-4 bg-orange rounded-xl hover:bg-orange/80 transition-all duration-300">
-            Launch App
-          </button>
+          <Link
+            target="_blank"
+            href={"https://docs.ztank.xyz"}
+            className="p-4 bg-orange rounded-xl hover:bg-orange/80 transition-all duration-300"
+          >
+            White paper
+          </Link>
           <HiOutlineMenuAlt3
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="lg:hidden text-4xl cursor-pointer"

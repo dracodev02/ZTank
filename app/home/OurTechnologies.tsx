@@ -10,7 +10,6 @@ import { useRef } from "react";
 const OurTechnologies = () => {
   const ourTechRef = useRef(null);
   const isInView = useInView(ourTechRef, {
-    margin: "0px 0px -100px 0px",
     once: true,
   });
 
@@ -60,7 +59,7 @@ const OurTechnologies = () => {
                 key={index}
                 style={{ animationDelay: `${index * 300}ms` }}
                 className={`shadow-whyShadow text-center gap-2 py-4 place-items-center justify-items-center bg-black bg-opacity-[0.68] rounded-[25px] w-full h-full ${
-                  isInView && "animate-fade-up"
+                  isInView ? "animate-fade-up" : "opacity-0"
                 }`}
               >
                 <ImageComp

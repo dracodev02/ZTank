@@ -11,7 +11,6 @@ import { useInView } from "framer-motion";
 const GameModes = () => {
   const gameModeRef = useRef(null);
   const isInView = useInView(gameModeRef, {
-    margin: "0px 0px -100px 0px",
     once: true,
   });
 
@@ -75,7 +74,7 @@ const GameModes = () => {
                   key={index}
                   style={{ animationDelay: `${index * 300}ms` }}
                   className={`max-w-[450px] bg-black/30 shadow-whyShadow rounded-[25px] h-[427px] flex flex-col items-center justify-center text-center ${
-                    isInView && "animate-fade-up"
+                    isInView ? "animate-fade-up" : "opacity-0"
                   }`}
                 >
                   <ImageComp src={card.imageSrc.src} />

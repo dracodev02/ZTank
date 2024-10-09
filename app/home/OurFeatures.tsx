@@ -11,7 +11,6 @@ import { useInView } from "framer-motion";
 const OurFeatures = () => {
   const ourFeaturesRef = useRef(null);
   const isInView = useInView(ourFeaturesRef, {
-    margin: "0px 0px -100px 0px",
     once: true,
   });
 
@@ -72,7 +71,7 @@ const OurFeatures = () => {
                     key={index}
                     style={{ animationDelay: `${index * 300}ms` }}
                     className={`shadow-whyShadow pl-9 pr-5 h-fit bg-black/30 rounded-[25px] flex gap-5 py-6 justify-center items-center backdrop-blur-sm ${
-                      isInView && "animate-fade-up"
+                      isInView ? "animate-fade-up" : "opacity-0"
                     }`}
                   >
                     <ImageComp

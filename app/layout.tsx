@@ -23,6 +23,9 @@ const sfProDisplay = localFont({
 export const metadata: Metadata = {
   title: "ZTank",
   description: "ZTank",
+  icons: {
+    icon: "/img/our-features/tank.png",
+  },
 };
 
 export default function RootLayout({

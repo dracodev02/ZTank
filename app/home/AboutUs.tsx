@@ -10,7 +10,6 @@ import { useRef } from "react";
 const AboutUs = () => {
   const whyZtankRef = useRef(null);
   const isInView = useInView(whyZtankRef, {
-    margin: "0px 0px -100px 0px",
     once: true,
   });
 
